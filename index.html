@@ -10,81 +10,138 @@
   <header class="site-header">
     <nav class="nav container">
       <a class="brand" href="#home">Abigail Kumsinda</a>
+
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+
+        <li class="theme-item">
+          <div class="theme-switch">
+            <span class="theme-label">Dark</span>
+            <label class="switch">
+              <input type="checkbox" id="theme-toggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
       </ul>
+
       <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero container">
-      <div class="hero-left">
-        <h1>Abigail Kumsinda</h1>
-        <p class="subtitle">ICT Graduate | Software Developer| UX/UI Designer</p>
-        <p class="intro">Dedicated ICT professional (Class of 2024) with experience and passion in web development and maintaining, data management and ICT support. I strive to build clean and responsive websites.</p>
-        <a class="cta" href="#contact">Get in touch</a>
-      </div>
-      <div class="hero-right">
-        <!-- Replace photo.svg with your real photo (same filename) -->
-        <img src="photo2.jpeg" alt="Abigail Kumsinda" class="profile-photo">
-      </div>
-    </section>
+    <!-- HOME -->
+    <section id="home" class="section hero-section">
+      <div class="container hero-wrap hero-animate">
+        <div class="hero-text">
+          <div class="hero-badge">Ready to innovate</div>
 
-    <section id="skills" class="section container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">Web Development (HTML, CSS, JS)</div>
-        <div class="skill">Data Management</div>
-        <div class="skill">ICT Helpdesk Support</div>
-        <div class="skill">UI / UX Design</div>
-        <div class="skill">Database Systems (MySQL)</div>
-      </div>
-    </section>
+          <h1 class="hero-title">Systems &amp; Website Developer</h1>
 
-    <section id="experience" class="section container">
-      <h2>Experience</h2>
-      <div class="exp-item">
-        <h3>Assistant Data Management Officer — National Economic Empowerment Fund (NEEF)</h3>
-        <p class="date">Jan 2025 — Present</p>
-        <p>Working on data systems, reporting, and assisting with digitization and data quality tasks.</p>
-      </div>
-      <div class="exp-item">
-        <h3>IT Intern — Wezi Medical Centre</h3>
-        <p class="date">Nov 2023 — Feb 2024</p>
-        <p>Provided IT support, helped with backups, digitization, and simple web-based tasks.</p>
-      </div>
-    </section>
-    <section id="projects">
-      <div class="container">
-          <h2 class="section-title">Projects</h2>
-  
-          <div class="project-card">
-              <img src="smart.png" alt="Automatic Irrigation System">
-              <div class="project-info">
-                  <h3>Automatic Irrigation System</h3>
-                  <p>An IoT-based project that automates watering by monitoring soil moisture and weather conditions. Built to help farmers optimize water usage and improve crop yield efficiently.</p>
-              </div>
+          <p class="hero-desc">
+            I develop modern websites and dependable systems that keep operations running smoothly.
+            My focus is performance, usability, data integrity, and SEO—so your platform looks great and works even better.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn btn-ghost" href="#projects">Projects</a>
           </div>
-  
-          <div class="project-card">
-              <img src="motho.png" alt="Motowabantu">
-              <div class="project-info">
-                  <h3>Motho Wa Bantu</h3>
-                  <p>A digital platform for Motho Dance Studios where clients can come and book their sessions, pay for them and check out up coming events. This projects has a very user friendly user interface that is very easy to use. The goal is to also integrate API's to make payments seamless</p>
-              </div>
-          </div>
-      </div>
-  </section>
 
-    <section id="contact" class="section container contact-section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:Abigailkumsinda05@gmail.com">Abigailkumsinda05@gmail.com</a></p>
-      <p>Phone: <a href="tel:+265981300567">0981300567</a></p>
+          <div class="hero-social">
+            <a class="social-link" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.88h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
+            </a>
+
+            <a class="social-link" href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22H16l-5.7-7.4L3.8 22H0.6l7.3-8.4L.1 2h7.4l5.2 6.8L18.9 2Zm-1.1 18h1.7L6.5 4H4.7l13.1 16Z"/></svg>
+            </a>
+
+            <a class="social-link" href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.36-1.18-3.36-1.18-.45-1.14-1.1-1.45-1.1-1.45-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.88 1.52 2.32 1.08 2.89.83.09-.65.35-1.08.63-1.33-2.21-.25-4.54-1.1-4.54-4.9 0-1.08.39-1.96 1.02-2.65-.1-.25-.44-1.27.1-2.64 0 0 .84-.27 2.75 1.01A9.5 9.5 0 0 1 12 6.8c.85 0 1.71.11 2.51.33 1.9-1.28 2.74-1.01 2.74-1.01.55 1.37.2 2.39.1 2.64.64.69 1.02 1.57 1.02 2.65 0 3.81-2.34 4.65-4.57 4.9.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            </a>
+
+            <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.55c0-1.32-.03-3.02-1.84-3.02-1.85 0-2.13 1.44-2.13 2.92v5.65H9.38V9h3.4v1.56h.05c.47-.9 1.62-1.84 3.33-1.84 3.56 0 4.22 2.34 4.22 5.38v6.35ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.56 20.45h3.56V9H3.56v11.45Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="photo2.jpeg" alt="Abigail Kumsinda" class="profile-photo">
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container reveal">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill"><span class="skill-icon">💻</span><span>Web Development (HTML, CSS, JavaScript, React)</span></div>
+          <div class="skill"><span class="skill-icon">📊</span><span>Data Management & Reporting</span></div>
+          <div class="skill"><span class="skill-icon">🛠️</span><span>ICT Help Desk Support</span></div>
+          <div class="skill"><span class="skill-icon">🎨</span><span>UI / UX Design</span></div>
+          <div class="skill"><span class="skill-icon">🗄️</span><span>Database Systems (MySQL)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container reveal">
+        <h2>Experience</h2>
+
+        <div class="exp-item">
+          <h3>Assistant Data Management Officer Intern — National Economic Empowerment Fund (NEEF)</h3>
+          <p class="date">Apr 2025 — Nov 2025</p>
+          <p>Working on data systems, reporting, and assisting with digitization and data quality tasks.</p>
+        </div>
+
+        <div class="exp-item">
+          <h3>IT Intern — Wezi Medical Centre</h3>
+          <p class="date">Nov 2023 — Feb 2024</p>
+          <p>Provided IT support, helped with backups, digitization, and simple web-based tasks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container reveal">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-card">
+          <img src="smart.png" alt="Automatic Irrigation System">
+          <div class="project-info">
+            <h3>Automatic Irrigation System</h3>
+            <p>Designed and implemented an IoT-based irrigation system that monitors soil moisture in real time and triggers watering only when needed to optimize water usage and support efficient crop management.</p>
+            <p class="tech-stack"><strong>Tech Used:</strong> IoT • Sensors • Microcontrollers • Data Monitoring</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="motho.png" alt="Motho Wa Bantu">
+          <div class="project-info">
+            <h3>Motho Wa Bantu</h3>
+            <p>Designed and developed a responsive platform for a dance studio, enabling clients to view events, book sessions, and manage inquiries. Built with a clean UI/UX foundation for future secure payment API integration.</p>
+            <p class="tech-stack"><strong>Tech Used:</strong> HTML • CSS • JavaScript • UI/UX • Responsive Design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container reveal">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:Abigailkumsinda05@gmail.com">Abigailkumsinda05@gmail.com</a></p>
+        <p>Phone: <a href="tel:+265981300567">0981300567</a></p>
+      </div>
     </section>
   </main>
 
