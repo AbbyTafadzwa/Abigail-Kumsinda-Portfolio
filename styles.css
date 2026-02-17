@@ -275,42 +275,125 @@ h2{
 /* =========================
    7) SKILLS
 ========================= */
-.skills-grid{
+/* Clean Skills Cards (6 cards, 3 per row on desktop) */
+.skills-cards{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-  margin-top: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 14px;
 }
 
-.skill{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: default;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  background: color-mix(in srgb, var(--bg) 85%, white);
-  padding: 12px 14px;
-  border-radius: 12px;
+.skill-card{
+  background: color-mix(in srgb, var(--bg) 88%, white);
   border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+  border-radius: 14px;
+  padding: 18px 16px;
+  transition: transform .2s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
-.skill:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(11,94,215,0.15);
+.skill-card:hover{
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  box-shadow: 0 14px 28px rgba(11,94,215,0.12);
 }
+
+.skill-card-icon{
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(11,94,215,0.10);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.skill-card h3{
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.skill-card p{
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .skills-cards{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px){
+  .skills-cards{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* =========================
    8) EXPERIENCE
 ========================= */
-.exp-item{
-  padding: 14px 0;
-  border-bottom: 1px dashed rgba(11,94,215,0.08);
+.skills-cards{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 14px;
 }
-.exp-item h3{ margin: 0; }
-.date{
+
+.skill-card{
+  background: color-mix(in srgb, var(--bg) 88%, white);
+  border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+  border-radius: 14px;
+  padding: 18px 16px;
+  transition: transform .2s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.skill-card:hover{
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  box-shadow: 0 14px 28px rgba(11,94,215,0.12);
+}
+
+.skill-card-icon{
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(11,94,215,0.10);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.skill-card h3{
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.skill-card p{
+  margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
-  margin: 6px 0 10px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .skills-cards{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px){
+  .skills-cards{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================
@@ -352,6 +435,82 @@ h2{
   flex: 1;
   padding: 22px;
 }
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact-title{
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-text{
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.contact-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-card{
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+  background: color-mix(in srgb, var(--bg) 85%, white);
+}
+
+.contact-card h4{
+  margin: 0 0 4px;
+}
+
+.contact-card a{
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* FORM */
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--text) 15%, transparent);
+  background: color-mix(in srgb, var(--bg) 85%, white);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* MOBILE */
+@media (max-width: 900px){
+  .contact-wrap{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* =========================
    10) FOOTER
