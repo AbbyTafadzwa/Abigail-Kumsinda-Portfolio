@@ -113,11 +113,17 @@ section{
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 260px;
+  grid-template-columns: minmax(0, 560px) 320px; /* text + fixed image column */
+  justify-content: start; /* don't push image to far right */
   align-items: center;
-  gap: 16px;
-  padding: 48px 0;
+  gap: 13px;              /* space between text & image */
+  padding: 30px 0;
+  max-width: 980px;       /* tightens the hero area only */
+  margin: 0 auto;         /* keeps it centered */
 }
+
+
+
 
 .hero-text{
   display:flex;
@@ -218,6 +224,7 @@ section{
 
 /* Photo */
 .hero-media{
+  justify-self: start;
   display:flex;
   justify-content:center;
 
