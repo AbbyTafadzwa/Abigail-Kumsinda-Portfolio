@@ -381,6 +381,21 @@ h2{
   transition: transform .2s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
+/* TABLET */
+@media (max-width: 900px){
+  .skills-cards{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* PHONE */
+@media (max-width: 520px){
+  .skills-cards{
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .skill-card:hover{
   transform: translateY(-6px);
   border-color: color-mix(in srgb, var(--accent) 55%, transparent);
