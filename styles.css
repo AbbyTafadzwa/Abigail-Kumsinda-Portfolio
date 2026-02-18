@@ -411,19 +411,6 @@ h2{
   line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 900px){
-  .skills-cards{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 560px){
-  .skills-cards{
-    grid-template-columns: 1fr;
-  }
-}
-
 /* =========================
    9) PROJECTS
 ========================= */
@@ -557,19 +544,24 @@ h2{
 }
 
 /* mobile: everything stacks */
-@media (max-width: 700px){
+/* CONTACT - responsive */
+@media (max-width: 900px){
+  .contact-wrap{
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
   .contact-form{
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   .contact-form textarea{
-    grid-column: auto !important;
-    grid-row: auto !important;
+    grid-column: auto;
+    grid-row: auto;
     min-height: 140px;
   }
 
   .contact-form button{
-    grid-column: auto !important;
     width: 100%;
   }
 }
@@ -657,25 +649,6 @@ h2{
   .nav-links{ display:none; }
   .nav-toggle{ display:block; }
 
-  .hero-wrap{
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .hero-actions{ justify-content: center; }
-  .hero-social{ justify-content: center; }
-
-  .profile-photo{
-    width: 170px;
-    height: 170px;
-    border-radius: 16px;
-    margin: 0 auto;
-  }
-
-  .hero-section::before{
-    background-position: center;
-    background-size: min(520px, 70vw);
-    opacity: 0.25;
-  }
 }
 
 @media (max-width: 768px){
