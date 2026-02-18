@@ -163,6 +163,34 @@ section{
   flex-wrap: wrap;
 }
 
+/* ===== MOBILE FIX: HERO ===== */
+@media (max-width: 900px){
+  .hero-wrap{
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding: 28px 0 !important;
+    text-align: center;
+  }
+
+  .hero-media{
+    justify-content: center !important;
+    order: 2;
+  }
+
+  .profile-photo{
+    width: min(320px, 85vw) !important;
+    height: auto !important;
+    max-height: 320px;
+    margin: 0 auto;
+  }
+
+  .hero-actions,
+  .hero-social{
+    justify-content: center !important;
+  }
+}
+
+
 .btn{
   display: inline-flex;
   align-items: center;
@@ -509,6 +537,43 @@ h2{
   .contact-wrap{
     grid-template-columns: 1fr;
   }
+  /* ===== CONTACT FORM: MAKE IT MOBILE FRIENDLY ===== */
+.contact-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* desktop: 2 cols */
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.contact-form textarea{
+  grid-column: 2 / 3;   /* desktop: message on the right */
+  grid-row: 1 / 4;
+  min-height: 160px;
+}
+
+.contact-form button{
+  grid-column: 1 / 2;
+  width: fit-content;
+}
+
+/* mobile: everything stacks */
+@media (max-width: 700px){
+  .contact-form{
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-form textarea{
+    grid-column: auto !important;
+    grid-row: auto !important;
+    min-height: 140px;
+  }
+
+  .contact-form button{
+    grid-column: auto !important;
+    width: 100%;
+  }
+}
+
 }
 
 
